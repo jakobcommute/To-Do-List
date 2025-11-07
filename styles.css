@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(243, 243, 243);
+  color: rgb(25, 25, 25);
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+button {
+  background-color: rgb(243, 230, 214);
+  border: none;
+  padding: 10px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid rgb(25, 25, 25);
+  width: 100%;
+  margin: 12px auto;
+}
+
+h1 {
+  margin: 30px 0 20px 0;
+}
+
+h2 {
+  border-bottom: 2px solid black;
+  margin: 0 10px;
+  padding-bottom: 5px;
+}
+
+li {
+  list-style-type: none;
+  border-bottom: 1px solid black;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+input[type="checkbox"] {
+  accent-color: rgb(194, 78, 78);
+  border-color: rgb(25, 25, 25);
+}
+
+.add-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.add-button {
+  border-radius: 0 20px 20px 0;
+  background-color: rgb(194, 78, 78);
+  width: 100px;
+}
+
+.add-input {
+  flex: 1;
+  height: 38.75px;
+  font-size: 1rem;
+  border: none;
+  background-color: rgb(243, 230, 214);
+  padding-left: 20px;
+  border-radius: 20px 0 0 20px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%; /* Gesamtbreite */
+  margin: 2rem auto; /* zentrieren */
+  gap: 2rem; /* Abstand zwischen den Spalten */
+  border-left: 1px solid transparent; /* nötig für den Trick unten */
+  position: relative;
+  border-radius: 25px;
+  background-color: rgb(243, 230, 214);
+  height: 400px;
+  width: 100%;
+}
+
+.list::before {
+  content: "";
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background-color: rgb(25, 25, 25);
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.spacer {
+  display: none;
+}
+
+.to-do,
+.done {
+  flex: 1;
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  gap: 2rem;
+}
+
+.button1,
+.button2 {
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 380px) {
+  .list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .list::before {
+    display: none;
+  }
+  .spacer {
+    display: block;
+    width: 90%;
+    border-top: 1px solid rgb(25, 25, 25);
+    margin: auto;
+  }
+}
