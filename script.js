@@ -1,7 +1,8 @@
 const addButton = document.querySelector(".add-button");
 const addInput = document.querySelector(".add-input");
-const toDoList = document.querySelector(".to-do");
+const toDoList = document.querySelector(".to-do-list");
 const doneList = document.querySelector(".done-list");
+const clearButton = document.querySelector(".clear-button");
 
 const aRight = document.querySelector(".button1");
 const aLeft = document.querySelector(".button2");
@@ -32,4 +33,9 @@ addButton.addEventListener("click", () => {
       }
     });
   }
+});
+
+clearButton.addEventListener("click", () => {
+  toDoList.innerHTML = "";
+  doneList.innerHTML = "";
 });
