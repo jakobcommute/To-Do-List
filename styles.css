@@ -131,6 +131,13 @@ ul {
   border-radius: 20px;
 }
 
+.clear-button {
+  border-radius: 12px;
+  padding: 12px 16px;
+  background-color: rgb(25, 25, 25);
+  color: rgb(243, 230, 214);
+}
+
 @media screen and (max-width: 380px) {
   .list {
     flex-direction: column;
